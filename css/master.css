@@ -1,0 +1,28 @@
+.container {
+    width: 400px;
+    margin: 0 auto;
+}
+h1 {
+    color: red;
+    text-transform: uppercase;
+}
+#controls {
+    text-align: center;
+}
+.time {
+    font-weight: bold;
+    font-size: 3em;
+    color: black !important;
+}
+
+h2 {
+	color: black!important;
+}
+
+body {
+	background-image: url("../pomodoro.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	background-color: #DFDFDF;
+}
