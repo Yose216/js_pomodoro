@@ -24,10 +24,10 @@ function startTimer(duration, display) {
 }
 $(document).ready(function(){
 	$("#play").click(function () {
-    var fiveMinutes = 60 * 25,
+        var fiveMinutes = 60 * 25,
         display = $('#timer');
-    startTimer(fiveMinutes, display);
-    cours();
+        startTimer(fiveMinutes, display);
+        enCours();
 	});
   $("#pause").click(myPauseFunction);
   $("#stop").click(myStopFunction);
@@ -38,6 +38,7 @@ $(document).ready(function(){
 }
 function myStopFunction () {
 	document.getElementById("timer").innerHTML = "00:00";
+    document.getElementById("aFaire").innerHTML =  "A faire"; 
 	clearInterval(compteur);
 }
 
