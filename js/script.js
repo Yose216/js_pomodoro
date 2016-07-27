@@ -1,6 +1,6 @@
 var compteur;
 var son = new Audio("Audio/371.ogg")
-var tache = document.getElementById("task").value; 
+
 
 function startTimer(duration, display) {
     var timer = duration, minutes, seconds;
@@ -15,11 +15,10 @@ function startTimer(duration, display) {
 
         if (--timer < 0) {
             timer = duration;
-        	document.getElementById("timer").innerHTML = "00:00";
 			clearInterval(compteur);
 			son.play();
-            Tache_fait();
-            alert(tache + ' finie\n' + 'Une Pause?')
+            Tache_fait(); 
+            document.getElementById("aFaire").innerHTML =  "A faire"; 
         }
     }, 1000);
 }
@@ -28,6 +27,7 @@ $(document).ready(function(){
     var fiveMinutes = 60 * 25,
         display = $('#timer');
     startTimer(fiveMinutes, display);
+    cours();
 	});
   $("#pause").click(myPauseFunction);
   $("#stop").click(myStopFunction);
@@ -44,5 +44,17 @@ function myStopFunction () {
 function Tache_fait () {
     var tache = document.getElementById("task").value; 
     document.getElementById("fait").innerHTML = tache;
+    alert(tache + ' finie\n' + 'Une Pause?')
+}
+
+$("#pomo").click(function(){
+  $(".doro").show();
+  $("#pomo").hide();
+});
+
+function enCours (){
+    var tache = document.getElementById("task").value; 
+    document.getElementById("aFaire").innerHTML =  tache + " en cours";
+
 }
 

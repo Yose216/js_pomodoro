@@ -20,9 +20,19 @@ h2 {
 }
 
 body {
-	background-image: url("../pomodoro.jpg");
+	background-image: url("../Images/pomodoro.jpg");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-attachment: fixed;
 	background-color: #DFDFDF;
+}
+
+.doro {
+    display: none;
+}
+
+#pomo {
+    margin-left: 38%;
+    margin-top: 15%;
+    height: 100px;
 }
